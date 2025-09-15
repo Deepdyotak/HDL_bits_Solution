@@ -10,7 +10,7 @@ module top_module (
         for(integer i=0;i<8;i++) begin
             
             i_prev[i] <= in[i];  // remember the previous state
-            pedge[i] <= ~i_prev[i] && in[i]; // this tells when prev state was 0 and later state is 1 then only pedge pedge 1.
+            pedge[i] <= ~i_prev[i] & in[i]; // this tells when prev state was 0 and later state is 1 then only pedge pedge 1.
         end
     end
 
